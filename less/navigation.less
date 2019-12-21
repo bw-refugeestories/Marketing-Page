@@ -1,0 +1,70 @@
+/* LESS Document */
+
+// Navigation Styles here
+
+nav {
+	border-bottom: 2px solid @navigation-border;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: center;
+	align-items: baseline;
+	width: 100%;
+	margin: 0 auto;
+//	padding: 1% 10%;
+	background-image: @header-bg;
+	
+//	@media @phone {
+//		width: 85%;
+//		flex-flow: column nowrap;
+//	}
+	
+
+	
+	.navbar {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+//		max-width: 800px;
+		width: 95%;
+		
+//		@media @phone {
+//			flex-flow: column nowrap;
+//		}
+		
+		.siteLogo {
+			dispaly: flex;
+			flex-flow: row nowrap;
+			justify-content: flex-start;
+			align-items: center;
+			width: 47%;
+			height: auto;
+			padding: 2% 5%;
+		}
+
+		.navLinks {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-evenly;
+			align-items: center;
+			width: 30%;
+
+			a {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				text-decoration: none;
+				color: @nav-font;
+				font-size: 1.6rem;
+
+			}
+		}
+	}
+	
+	
+}
+
+
+

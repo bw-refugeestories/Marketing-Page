@@ -1,0 +1,148 @@
+/* LESS Document */
+
+header {
+	width: 100%;
+	margin: 0 auto;
+	
+//	@media @phone {
+//		width: 80%;
+//	}
+	
+	.headContent {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		padding-bottom: 20px;
+		
+		img {
+			margin-top: 0;
+			margin-bottom: 10px;
+			
+//			@media @phone {
+//				width: 80%;
+//				height: auto;
+//			}
+		}
+		
+		.headText {
+			display: flex;
+			flex-flow: row wrap;
+			width: 80%;
+		}
+	}
+}
+
+.statContainer {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-content: center;
+	width: 95%;
+	padding: 10px;
+	
+	.statImg {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-content: center;
+		width: 500px;
+	}
+}
+
+.byNumbers {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding-bottom: 20px;
+	
+	.refugees {
+		display: flex;
+		flex-flow: row wrap;
+		width: 80%;
+	}
+}
+
+.defineContainer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+	padding-bottom: 20px;
+}
+
+.home {
+
+  .content-section {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+   
+    
+    .text-content {
+      width: 48%;
+      padding-right: 1%;
+    }
+
+    .img-content {
+      width: 48%;
+      padding-left: 1%;
+
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .inverse-content {
+    padding-bottom: 30px;
+    border-bottom: 2px dashed @navigation-border;
+
+    .text-content {
+      padding-left: 1%;
+      padding-right: 0;
+    }
+
+    .img-content {
+      padding-right: 1%;
+      padding-left: 0;
+    }
+  }
+
+  .content-destination {
+    width: 75%;
+    margin: 0 auto 30px;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  .content-pick {
+    padding-top: 30px;
+    border-top: 2px dashed @navigation-border;
+    display: flex;
+    justify-content: space-between;
+
+    .destination {
+      width: 30%;
+      margin-bottom: 30px;
+    }
+  }
+}// home
+
+.btn {
+	.signMeUp (flex-start, space-around, center);
+	background: @button-bg;
+	border: 2px solid darken(@button-bg, 3%);
+	border-radius: 10px;
+	padding: 10px 20px;
+	margin: 5%;
+	color: aquamarine;
+	
+	&:hover {
+		background: darken(@button-bg, 10%);
+	}
+}
