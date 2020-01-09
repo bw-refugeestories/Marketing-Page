@@ -4,10 +4,6 @@ header {
 	width: 100%;
 	margin: 0 auto;
 	
-//	@media @phone {
-//		width: 80%;
-//	}
-	
 	.headContent {
 		display: flex;
 		flex-flow: row wrap;
@@ -17,11 +13,6 @@ header {
 		img {
 			margin-top: 0;
 			margin-bottom: 10px;
-			
-//			@media @phone {
-//				width: 80%;
-//				height: auto;
-//			}
 		}
 		
 		.headText {
@@ -49,6 +40,16 @@ header {
 	}
 }
 
+//.numbers {
+//	background: @picton-blue;
+//	width: 100%;
+//}
+//
+//.define {
+//	background: @green-blue;
+//	width: 100%;
+//}
+
 .byNumbers {
 	display: flex;
 	flex-flow: row wrap;
@@ -65,73 +66,151 @@ header {
 .defineContainer {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-between;
-	align-content: center;
-	align-items: center;
+	justify-content: center;
 	padding-bottom: 20px;
+	
+	.define {
+		display: flex;
+		flex-flow: column wrap;
+		width: 80%;
+		
+		.text-content {
+			display: flex;
+			flex-flow: column wrap;
+			justify-content: center;
+			align-content: center;
+			align-items: center;
+			padding: 10px;
+			
+			@media (min-width: 500px) {
+				flex-flow: row wrap;
+				justify-content: space-between;
+			}
+			
+			@media (min-width: 800px) {
+				flex-flow: row nowrap;
+			}
+		}
+	}
 }
 
-.home {
-
-  .content-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-   
-    
-    .text-content {
-      width: 48%;
-      padding-right: 1%;
-    }
-
-    .img-content {
-      width: 48%;
-      padding-left: 1%;
-
-      img {
-        border-radius: 10px;
-      }
-    }
-  }
-
-  .inverse-content {
-    padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
-
-    .text-content {
-      padding-left: 1%;
-      padding-right: 0;
-    }
-
-    .img-content {
-      padding-right: 1%;
-      padding-left: 0;
-    }
-  }
-
-  .content-destination {
-    width: 75%;
-    margin: 0 auto 30px;
-
-    img {
-      border-radius: 10px;
-    }
-  }
-
-  .content-pick {
-    padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
-    display: flex;
-    justify-content: space-between;
-
-    .destination {
-      width: 30%;
-      margin-bottom: 30px;
-    }
-  }
-}// home
+//.home {
+//
+//  .content-section {
+//    margin: 30px 0;
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: space-between;
+//
+//   
+//    
+//    .text-content {
+//      width: 48%;
+//      padding-right: 1%;
+//    }
+//
+//    .img-content {
+//      width: 48%;
+//      padding-left: 1%;
+//
+//      img {
+//        border-radius: 10px;
+//      }
+//    }
+//  }
+//
+//  .inverse-content {
+//    padding-bottom: 30px;
+//    border-bottom: 2px dashed @navigation-border;
+//
+//    .text-content {
+//      padding-left: 1%;
+//      padding-right: 0;
+//    }
+//
+//    .img-content {
+//      padding-right: 1%;
+//      padding-left: 0;
+//    }
+//  }
+//
+.storiesContainer {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-content: space-around;
+	align-items: center;
+	width: 100%;
+	background: @gray-asparagus;
+	padding: 10px;
+	margin: 80%;
+	
+	@media (min-width: 500px) {
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+	
+	@media (min-width: 800px) {
+		flex-flow: row nowrap;
+	}
+	
+	.stories-section {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		margin: 33%;
+		padding: 10px;
+		
+		@media (min-width: 500px) {
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
+		
+		@media (min-width: 800px) {
+			flex-flow: row nowrap;
+		}
+		
+		.storiesImg {
+			max-height: 200px;
+			width: auto;
+			border-radius: 10px;
+		}
+		
+		.story {
+			display: flex;
+//			flex-flow: column nowrap;
+			justify-content: center;
+			align-content: center;
+		}
+	}
+	
+}
+//	
+//
+//
+//  .content-destination {
+//    width: 75%;
+//    margin: 0 auto 30px;
+//
+//    img {
+//      border-radius: 10px;
+//    }
+//  }
+//
+//  .content-pick {
+//    padding-top: 30px;
+//    border-top: 2px dashed @navigation-border;
+//    display: flex;
+//    justify-content: space-between;
+//
+//    .destination {
+//      width: 30%;
+//      margin-bottom: 30px;
+//    }
+//  }
+//}// home
 
 .btn {
 	.signMeUp (flex-start, space-around, center);
