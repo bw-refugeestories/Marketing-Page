@@ -179,6 +179,12 @@ h4 {
   display: flex;
   justify-content: center;
 }
+h5 {
+  font-size: 2.1rem;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
 p {
   line-height: 1.5;
   font-size: 1.6rem;
@@ -215,27 +221,63 @@ nav {
 }
 nav .navbar {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-flow: column nowrap;
+  justify-content: center;
   align-content: center;
   align-items: center;
   width: 95%;
 }
+@media (min-width: 500px) {
+  nav .navbar {
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 800px) {
+  nav .navbar {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}
 nav .navbar .siteLogo {
   dispaly: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
-  width: 47%;
+  width: 100%;
   height: auto;
   padding: 2% 5%;
 }
+@media (min-width: 500px) {
+  nav .navbar .siteLogo {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 800px) {
+  nav .navbar .siteLogo {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 47%;
+  }
+}
 nav .navbar .navLinks {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   align-items: center;
-  width: 30%;
+  width: 80%;
+}
+@media (min-width: 500px) {
+  nav .navbar .navLinks {
+    flex-flow: row wrap;
+  }
+}
+@media (min-width: 800px) {
+  nav .navbar .navLinks {
+    flex-flow: row wrap;
+    width: 40%;
+  }
 }
 nav .navbar .navLinks a {
   display: flex;
@@ -244,18 +286,58 @@ nav .navbar .navLinks a {
   text-decoration: none;
   color: #F0F2EF;
   font-size: 1.6rem;
+  padding-bottom: 10px;
+}
+@media (min-width: 500px) {
+  nav .navbar .navLinks a {
+    padding-bottom: 0;
+  }
 }
 /* LESS Document */
 .footer {
   width: 100%;
-  border-top: 2px dashed silver;
-  background: #40593C;
+  border-top: 2px solid linear-gradient(to right, #40593C, #1961AC);
+  background: linear-gradient(to right, #40593C, #1961AC);
+  padding: 30px 20px;
+  color: #F0F2EF;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-.footer p {
-  text-align: center;
-  color: #4A4A49;
-  font-size: 1.6rem;
-  padding: 20px;
+.footer ol,
+.footer ul {
+  list-style: none;
+}
+.footer .fa-facebook-square:before {
+  content: "\f082";
+}
+.footer .fa-twitter-square:before {
+  content: "\f081";
+}
+.footer .fa-instagram:before {
+  content: "\f16d";
+}
+.footer .box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer .box h5 {
+  margin: 0 0 10px;
+  color: #F0F2EF;
+}
+.footer .box .social li {
+  display: flex;
+  align-items: center;
+  margin: 0 0 7px;
+}
+.footer .box .social i:after {
+  content: "\00a0";
+}
+.footer .box .links a {
+  text-decoration: none;
+  color: #F0F2EF;
 }
 /* LESS Document */
 header {
@@ -290,7 +372,13 @@ header .headContent .headText {
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-  width: 500px;
+  width: 400px;
+  height: auto;
+}
+@media (min-width: 500px) {
+  .statContainer .statImg {
+    width: 500px;
+  }
 }
 .byNumbers {
   display: flex;
@@ -308,12 +396,12 @@ header .headContent .headText {
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
-  padding-bottom: 20px;
+  padding: 20px 0;
   margin: 20px 0;
 }
 @media (min-width: 500px) {
   .defineContainer {
-    flex-flow: comlumn wrap;
+    flex-flow: column wrap;
     justify-content: center;
   }
 }
@@ -333,6 +421,12 @@ header .headContent .headText {
   justify-content: center;
   align-content: space-between;
   align-items: flex-start;
+  width: 80%;
+}
+@media (min-width: 500px) {
+  .defineContainer .define {
+    width: 100%;
+  }
 }
 .defineContainer .define h3 {
   display: flex;
@@ -340,31 +434,33 @@ header .headContent .headText {
 }
 .defineContainer .define .text-content {
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-content: space-between;
   align-items: flex-start;
-  padding: 2%;
-  width: 40%;
 }
 @media (min-width: 500px) {
   .defineContainer .define .text-content {
     flex-flow: column wrap;
     justify-content: center;
+    padding: 2%;
+    width: 40%;
   }
 }
 @media (min-width: 800px) {
   .defineContainer .define .text-content {
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding: 2%;
+    width: 40%;
   }
 }
 .defineContainer .explain {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-content: space-between;
   align-items: flex-start;
-  width: 80%;
 }
 .defineContainer .explain h3 {
   display: flex;
@@ -380,75 +476,207 @@ header .headContent .headText {
 }
 .storiesContainer {
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  padding: 10px;
-  margin: 30px 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  padding: 20px 0 0;
+  margin: 20px 0;
+  width: 100%;
 }
 @media (min-width: 500px) {
   .storiesContainer {
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    flex-flow: column wrap;
+    justify-content: center;
   }
 }
 @media (min-width: 800px) {
   .storiesContainer {
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
+    justify-content: center;
   }
+}
+.storiesContainer h2 {
+  display: flex;
+  justify-content: center;
 }
 .storiesContainer .storiesHead {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
+  align-items: center;
+}
+.storiesContainer .storiesHead .headTxt {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  width: 80%;
 }
 .storiesContainer .stories-section {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  margin: 30px 0;
-  width: 33%;
-}
-@media (min-width: 500px) {
-  .storiesContainer .stories-section {
-    flex-flow: column nowrap;
-    justify-content: space-between;
-  }
-}
-@media (min-width: 800px) {
-  .storiesContainer .stories-section {
-    flex-flow: column nowrap;
-  }
-}
-.storiesContainer .stories-section .story {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-content: center;
+  align-items: flex-start;
+  padding: 0 10px;
+  background: #1961AC;
 }
-.storiesContainer .stories-section .story img {
-  height: auto;
-  max-width: 100%;
+@media (min-width: 500px) {
+  .storiesContainer .stories-section {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+}
+@media (min-width: 800px) {
+  .storiesContainer .stories-section {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+}
+.storiesContainer .stories-section .story1,
+.storiesContainer .stories-section .story2,
+.storiesContainer .stories-section .story3 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  padding-bottom: 10px;
+  color: #F0F2EF;
+  font-weight: bold;
+}
+@media (min-width: 500px) {
+  .storiesContainer .stories-section .story1,
+  .storiesContainer .stories-section .story2,
+  .storiesContainer .stories-section .story3 {
+    flex-flow: column wrap;
+    padding-bottom: 0;
+    padding-right: 20px;
+    max-width: 30%;
+  }
+}
+@media (min-width: 800px) {
+  .storiesContainer .stories-section .story1,
+  .storiesContainer .stories-section .story2,
+  .storiesContainer .stories-section .story3 {
+    flex-flow: column wrap;
+    padding-bottom: 0;
+    padding-right: 20px;
+    max-width: 30%;
+  }
+}
+.storiesContainer .stories-section .story1 img,
+.storiesContainer .stories-section .story2 img,
+.storiesContainer .stories-section .story3 img {
+  display: flex;
+  justify-content: center;
+  max-height: auto;
   border-radius: 10px;
+  padding: 10px 0 10px;
 }
 .btn {
-  display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
   align-content: space-around;
   align-items: center;
   background: linear-gradient(to right, #40593C, #1961AC);
   border: 2px solid linear-gradient(to right, #40593C, #1961AC);
   border-radius: 10px;
   padding: 10px 20px;
-  margin: 20px 42.5%;
+  margin: 20px 0;
   width: 200px;
-  height: 100px;
+  height: 75px;
   font-size: 2rem;
   font-weight: bolder;
   color: #F0F2EF;
   box-shadow: 3px 3px 3px 3px #40593C;
+  display: flex;
+  justify-content: center;
 }
 .btn:hover {
   background: linear-gradient(to right, #1961AC, #40593C);
+}
+.hText {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  padding: 20px 0 0;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+.hText h2 {
+  display: flex;
+  justify-content: center;
+}
+.hText p {
+  display: flex;
+  justify-content: center;
+}
+.team {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  width: 100%;
+}
+@media (min-width: 500px) {
+  .team {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 800px) {
+  .team {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+.team h2 {
+  width: 100%;
+}
+.team .teamMember {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 0 0 20px;
+  width: 100%;
+}
+@media (min-width: 500px) {
+  .team .teamMember {
+    flex-flow: column wrap;
+    width: 47%;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 800px) {
+  .team .teamMember {
+    flex-flow: column wrap;
+    width: 30%;
+    padding-right: 20px;
+  }
+}
+.team .teamMember img {
+  display: flex;
+  justify-content: center;
+  max-height: 200px;
+  width: auto;
+  padding-bottom: 20px;
+}
+.team .teamMember .bio {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+  width: 90%;
+}
+.team .teamMember .bio h4 {
+  width: 100%;
 }

@@ -1,4 +1,6 @@
 /* LESS Document */
+//Begin Home Page CSS
+//Begin Header CSS
 
 header {
 	width: 100%;
@@ -21,8 +23,10 @@ header {
 			width: 80%;
 		}
 	}
-}
+} 
+//End Header CSS
 
+//Begin "By The Numbers" section CSS
 .statContainer {
 	display: flex;
 	flex-flow: row nowrap;
@@ -36,19 +40,14 @@ header {
 		flex-flow: row wrap;
 		justify-content: center;
 		align-content: center;
-		width: 500px;
+		width: 400px;
+		height: auto;
+		
+		@media (min-width: 500px) {
+			width: 500px;
+		}
 	}
 }
-
-//.numbers {
-//	background: @picton-blue;
-//	width: 100%;
-//}
-//
-//.define {
-//	background: @green-blue;
-//	width: 100%;
-//}
 
 .byNumbers {
 	display: flex;
@@ -62,18 +61,19 @@ header {
 		width: 80%;
 	}
 }
+//End "By the Numbers" section CSS
 
+//Begin Definitions and Explanations section CSS
 .defineContainer {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-content: center;
-	padding-bottom: 20px;
-//	width: 100%;
+	padding: 20px 0;
 	margin: 20px 0;
 	
 	@media (min-width: 500px) {
-		flex-flow: comlumn wrap;
+		flex-flow: column wrap;
 		justify-content: center;
 	}
 	
@@ -93,7 +93,11 @@ header {
 		justify-content: center;
 		align-content: space-between;
 		align-items: flex-start;
-//		width: 80%;
+		width: 80%;
+		
+		@media (min-width: 500px) {
+			width: 100%;
+		}
 		
 		h3 {
 			display: flex;
@@ -102,31 +106,34 @@ header {
 		
 		.text-content {
 			display: flex;
-			flex-flow: column wrap;
+			flex-flow: row wrap;
 			justify-content: center;
 			align-content: space-between;
 			align-items: flex-start;
-			padding: 2%;
-			width: 40%;
 			
 			@media (min-width: 500px) {
 				flex-flow: column wrap;
 				justify-content: center;
+				padding: 2%;
+				width: 40%;
 			}
 			
 			@media (min-width: 800px) {
-				flex-flow: column nowrap;
+				flex-flow: column wrap;
+				justify-content: center;
+				padding: 2%;
+				width: 40%;
+				
 			}
 		}
 	}
 	
 	.explain {
 		display: flex;
-		flex-flow: column nowrap;
+		flex-flow: row wrap;
 		justify-content: center;
 		align-content: space-between;
 		align-items: flex-start;
-		width: 80%;
 		
 		h3 {
 			display: flex;
@@ -143,144 +150,223 @@ header {
 		}
 	}
 }
+//End Definitions and Explanations section CSS
 
-//.home {
-//
-//  .content-section {
-//    margin: 30px 0;
-//    display: flex;
-//    flex-wrap: wrap;
-//    justify-content: space-between;
-//
-//   
-//    
-//    .text-content {
-//      width: 48%;
-//      padding-right: 1%;
-//    }
-//
-//    .img-content {
-//      width: 48%;
-//      padding-left: 1%;
-//
-//      img {
-//        border-radius: 10px;
-//      }
-//    }
-//  }
-//
-//  .inverse-content {
-//    padding-bottom: 30px;
-//    border-bottom: 2px dashed @navigation-border;
-//
-//    .text-content {
-//      padding-left: 1%;
-//      padding-right: 0;
-//    }
-//
-//    .img-content {
-//      padding-right: 1%;
-//      padding-left: 0;
-//    }
-//  }
-//
+//Begin Stories section CSS
 .storiesContainer {
 	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-between;
-	padding: 10px;
-	margin: 30px 0;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: center;
+	padding: 20px 0 0;
+	margin: 20px 0;
+	width: 100%;
 	
 	@media (min-width: 500px) {
-		flex-flow: column nowrap;
-		justify-content: space-between;
+		flex-flow: column wrap;
+		justify-content: center;
 	}
 	
 	@media (min-width: 800px) {
-		flex-flow: column nowrap;
+		flex-flow: column wrap;
+		justify-content: center;
+	}
+	
+	h2 {
+		display: flex;
+		justify-content: center;
 	}
 	
 	.storiesHead {
 		display: flex;
 		flex-flow: column nowrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-content: center;
+		align-items: center;
+	
+		.headTxt {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: flex-start;
+			align-content: center;
+			align-items: center;
+			width: 80%;
+		}
 	}
 	
 	.stories-section {
 		display: flex;
-		flex-flow: column wrap;
-		justify-content: space-between;
-		margin: 30px 0;
-		width: 33%;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: flex-start;
+		padding: 0 10px;
+		background: @green-blue;
+		
+
 		
 		@media (min-width: 500px) {
-			flex-flow: column nowrap;
+			flex-flow: row wrap;
 			justify-content: space-between;
+			align-content: space-between;
 		}
 		
 		@media (min-width: 800px) {
-			flex-flow: column nowrap;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-content: space-between;
 		}
 		
 		
-		.story {
+		.story1, .story2, .story3, {
 			display: flex;
 			flex-flow: column nowrap;
 			justify-content: center;
 			align-content: center;
-//			width: 33%;
-//			padding-right: 1%;
+			align-items: flex-start;
+//			max-width: 30%;
+			padding-bottom: 10px;
+			color: @anti-flash-white;
+			font-weight: bold;
+			
+			@media (min-width: 500px) {
+				flex-flow: column wrap;
+				padding-bottom: 0;
+				padding-right: 20px;
+				max-width: 30%;
+			}
+			
+			@media (min-width: 800px) {
+				flex-flow: column wrap;
+				padding-bottom: 0;
+				padding-right: 20px;
+				max-width: 30%;
+			}
 			
 			img {
-				height: auto;
-				max-width: 100%;
+				display: flex;
+				justify-content: center;
+				max-height: auto;
+//				max-width: 30%;
 				border-radius: 10px;
+				padding: 10px 0 10px;
 			}
+
 		}
 	}
 	
 }
-//	
-//
-//
-//  .content-destination {
-//    width: 75%;
-//    margin: 0 auto 30px;
-//
-//    img {
-//      border-radius: 10px;
-//    }
-//  }
-//
-//  .content-pick {
-//    padding-top: 30px;
-//    border-top: 2px dashed @navigation-border;
-//    display: flex;
-//    justify-content: space-between;
-//
-//    .destination {
-//      width: 30%;
-//      margin-bottom: 30px;
-//    }
-//  }
-//}// home
+//End Stories section CSS
 
+//Call to Action button CSS
 .btn {
 	.signMeUp (center, space-around, center);
 	background: @nav-gradient;
 	border: 2px solid @nav-gradient;
 	border-radius: 10px;
 	padding: 10px 20px;
-	margin: 20px 42.5%;
+	margin: 20px 0;
 	width: 200px;
-	height: 100px;
+	height: 75px;
 	font-size: 2rem;
 	font-weight: bolder;
 	color: @nav-font;
 	box-shadow: 3px 3px 3px 3px @gray-asparagus;
+	display: flex;
+	justify-content: center;
 	
 	&:hover {
 		background: @nav-gradient-rev;
+	}
+}
+//End Home Page CSS
+
+
+//Begin About page CSS
+
+.hText {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	padding: 20px 0 0;
+	font-size: 2.5rem;
+	font-weight: bolder;
+	
+	h2 {
+		display: flex;
+		justify-content: center;
+	}
+	
+	p {
+		display: flex;
+		justify-content: center;
+
+	}
+}
+
+.team {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: flex-start;
+	padding-bottom: 20px;
+	width: 100%;
+	
+	@media (min-width: 500px) {
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	
+	@media (min-width: 800px) {
+		flex-flow: row wrap;
+		justify-content: center;
+	}
+	
+	h2 {
+		width: 100%;
+	}
+	
+	.teamMember {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		padding: 0 0 20px;
+		width: 100%;
+		
+		@media (min-width: 500px) {
+			flex-flow: column wrap;
+			width: 47%;
+			padding-right: 20px;
+		}
+		
+		@media (min-width: 800px) {
+			flex-flow: column wrap;
+			width: 30%;
+			padding-right: 20px;
+		}
+		
+		img {
+			display: flex;
+			justify-content: center;
+			max-height: 200px;
+			width: auto;
+			padding-bottom: 20px;
+		}
+		
+		.bio {
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+			align-content: flex-start;
+			width: 90%;
+			
+			h4 {
+				width: 100%;
+			}
+		}
 	}
 }

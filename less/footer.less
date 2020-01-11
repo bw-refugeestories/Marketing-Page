@@ -1,14 +1,55 @@
 /* LESS Document */
 
 .footer {
-  width: 100%;
-  border-top: 2px dashed silver;
-  background: @footer-bg;
+	width: 100%;
+	border-top: 2px solid @nav-gradient;
+	background: @nav-gradient;
+	padding: 30px 20px;
+	color: @nav-font;
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.5rem;
+	font-weight: bold;
+	
+	ol, ul {
+		list-style: none;
+	}
+	
+	.fa-facebook-square:before {
+		content: "\f082";
+	}
+	
+	.fa-twitter-square:before {
+		content: "\f081";
+	}
+	
+	.fa-instagram:before {
+		content: "\f16d";
+	}
   
-  p {
-    text-align: center;
-    color: @font-color;
-    font-size: 1.6rem;
-    padding: 20px;
-  }
+	.box {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		
+		h5 {
+			margin: 0 0 10px;
+			color: @nav-font;
+		}
+		
+		.social li {
+			display: flex;
+			align-items: center;
+			margin: 0 0 7px;
+		}
+		
+		.social i:after {
+			content: "\00a0";
+		}
+		
+		.links a {
+			text-decoration: none;
+			color: @nav-font;
+		}
+	}
 }
