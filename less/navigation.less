@@ -23,33 +23,59 @@ nav {
 	
 	.navbar {
 		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
+		flex-flow: column nowrap;
+		justify-content: center;
 		align-content: center;
 		align-items: center;
 //		max-width: 800px;
 		width: 95%;
 		
-//		@media @phone {
-//			flex-flow: column nowrap;
-//		}
+		@media (min-width: 500px) {
+			flex-flow: column wrap;
+			justify-content: space-between;
+		}
+		
+		@media (min-width: 800px) {
+			flex-flow: row nowrap;
+			justify-content: space-between;
+		}
 		
 		.siteLogo {
 			dispaly: flex;
-			flex-flow: row nowrap;
-			justify-content: flex-start;
+			flex-flow: row wrap;
+			justify-content: center;
 			align-items: center;
-			width: 47%;
+			width: 100%;
 			height: auto;
 			padding: 2% 5%;
+			
+			@media(min-width: 500px) {
+				flex-flow: row wrap;
+				justify-content: center;
+			}
+			
+			@media (min-width: 800px) {
+				flex-flow: row nowrap;
+				justify-content: flex-start;
+				width: 47%;
+			}
 		}
 
 		.navLinks {
 			display: flex;
-			flex-flow: row wrap;
-			justify-content: space-evenly;
+			flex-flow: column nowrap;
+			justify-content: space-between;
 			align-items: center;
-			width: 30%;
+			width: 80%;
+			
+			@media (min-width: 500px) {
+				flex-flow: row wrap;
+			}
+			
+			@media (min-width: 800px) {
+				flex-flow: row wrap;
+				width: 40%;
+			}
 
 			a {
 				display: flex;
@@ -58,6 +84,11 @@ nav {
 				text-decoration: none;
 				color: @nav-font;
 				font-size: 1.6rem;
+				padding-bottom: 10px;
+				
+				@media (min-width: 500px) {
+					padding-bottom: 0;
+				}
 
 			}
 		}
